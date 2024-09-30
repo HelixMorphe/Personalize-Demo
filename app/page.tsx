@@ -1,12 +1,10 @@
-import axios from 'axios';
-
-async function getNames(): Promise<string[]> {
-  const names = await axios.get(`${process.env.DOMAIN}/api/names`).then((res) => res.data);
-  return names;
-}
+// async function getNames(): Promise<string[]> {
+//   const names = await axios.get(`${process.env.DOMAIN}/api/names`).then((res) => res.data);
+//   return names;
+// }
 
 export default async function Home() {
-  const names = await getNames();
+  const names = ['Hello', 'World'];
 
   return (
     <div className="h-screen flex items-center justify-center">
